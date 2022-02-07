@@ -9,6 +9,6 @@ jobs:
         run: |
          buildah login -u ${{ github.repository_owner }} -p ${{ github.token }} ghcr.io
          env
-         cat /home/runner/.docker/config.json | jq '.' | grep -v '"auth"'
-         cat /var/tmp/containers-user-1001/containers/containers/auth.json | jq '.' | grep -v '"auth"'
+         cat /home/runner/.docker/config.json | jq '.' 
+         cat /var/tmp/containers-user-1001/containers/containers/auth.json | jq '.' | sed 's/: ".*/: SNIP/' 
 
