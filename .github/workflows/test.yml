@@ -9,4 +9,6 @@ jobs:
         run: |
          buildah login -u ${{ github.repository_owner }} -p ${{ github.token }} ghcr.io
          env
-         find / -name auth.json -or -name config.json
+         cat /home/runner/.docker/config.json | jq '.' | grep -v '"auth"'
+         cat /var/tmp/containers-user-1001/containers/containers/auth.json | jq '.' | grep -v '"auth"'
+
