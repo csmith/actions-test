@@ -2,7 +2,9 @@
 
 ## Unreleased
 
-- Some stuff
+## v1.2.0 - 2026-02-09
+
+- Some stuff outside headings
 
 ## v1.1.0 - 2026-02-09
 
